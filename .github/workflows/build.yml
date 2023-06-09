@@ -33,19 +33,19 @@ jobs:
           push: true
           platforms: linux/arm64
 
-    - name: Testowanie CVE
+      - name: Testowanie CVE
         run: |
-        docker pull zadanie2
-        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy zadanie2
+          docker pull zadanie2
+          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy zadanie2
 
-    - name: Publikowanie obrazy na github
-    uses: docker/build-push-action@v2
-    with:
-        context: .
-        file: Dockerfile
-        push: true
-        platforms: linux/amd64,linux/arm64
-        registry: ghcr.io
-        repository: zadanie2/zadanie2
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publikowanie obrazy na github
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          registry: ghcr.io
+          repository: zadanie2/zadanie2
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
