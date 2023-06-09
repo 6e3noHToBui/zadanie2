@@ -9,4 +9,5 @@
    <h4>Bazowy React project</h4>
 <h4>Schowany folder .github w którym znajduje się plik build.yml z configuracją GitHub Action</h4>
 
-<h2 align="left">Nie udało się uruchomić całkiem project, bo wywala mi jakiś bład związany z Nodem i nie mogę poprawić, mam nadzieje że zadziała na innym komputerze </h2>
+<h2 align="left">Nie udało się uruchomić całkiem project, bo wywala mi jakiś bład związany z Nodem i nie mogę naprawić to, mam nadzieje że zadziała na innym komputerze.
+Błąd jest widoczny w GitHub Action </h2>
